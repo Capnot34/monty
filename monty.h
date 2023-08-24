@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,5 +55,6 @@ void rotl_op(stack_t **stack, unsigned int line_number);
 void rotr_op(stack_t **stack, unsigned int line_number);
 void stack_op(stack_t **stack, unsigned int line_number);
 void queue_op(stack_t **stack, unsigned int line_number);
+void free_stack(stack_t **stack);
 
 #endif /* MONTY_H */
