@@ -1,46 +1,6 @@
->,                 (read the first digit into cell 1)
->,                 (read the second digit into cell 2)
-<<                 (move back to cell 0)
-
-++++++             (set up a constant value in cell 0 for calculation)
-[                  (start of loop)
- >------ ---       (subtract 8 * 6 = 48 from cell 1 which is ASCII value for '0')
- >------ ---       (subtract 8 * 6 = 48 from cell 2 which is ASCII value for '0')
- <<-               (decrease cell 0, move back to it)
-]                  (loop ends when cell 0 reaches 0, at that point cells 1 and 2 have the numeric values)
-
->                  (move to cell 1)
-[                  (start of loop to add cell 1 and cell 2)
- >[>+>+<<-]        (duplicating content of cell 1 to cells 2 and 3)
- >[<+>-]           (add the value in cell 2 to cell 3 and clear cell 2)
- <<-               (decrease cell 1 and move back to it)
-]                  (loop ends when cell 1 reaches 0, at this point, the sum is in cell 3)
-
->[-]               (clear cell 1)
->+>                (move to cell 3)
->+++++ +++++       (set up a constant value in cell 4 for calculation)
-<                  (move back to cell 3)
-[                  (start of loop for printing)
- -                 (decrease cell 3)
- >- [>>>]+++++ +++++<<+   (part of logic for printing the correct ASCII value)
- [<<<]>>>>         (movement across cells)
-]                  (end of loop for printing)
-
-<                  (move to cell 3)
--                  (decrease it by 1)
-<+++++ +++++       (prepare 10 in cell 2)
->>>                (move to cell 5)
-[-<<<->>>]         (clean up logic)
-<<<                (move back to cell 2)
-<+++++ +           (prepare another value in cell 1 for printing)
-
-[                  (loop to transform cells 1 and 2)
- >+++++ +++>       (part of logic for printing the correct ASCII value)
- [+++++ +++>]      (more logic for printing)
- <[<]>-            (more logic for printing)
-]                  (end of loop)
-
->>[.<<]            (print the characters in cells 1 and 2)
-<[<<]>>.           (print the newline character)
-
->>>>>>>>>>>>>>>>>>>>>>>++++++++++.   (part of the logic for newline or for another character)
+,>++++++++[<------>-],>++++++++[<------>-]<<[->[>+>+<<-]>>[-<<+>>]<[->>+<<]<<]>>>>>++++++++++<
+[->-[>+>>]>[+[-<+>]>+>>]<<<<<]
+>>>>++++++++[<++++++>-]<.
+<[->>+<<]
+>>>++++++++[<++++++>-]<.
+>++++++++++.
