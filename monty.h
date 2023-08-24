@@ -46,7 +46,13 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
-void div_op(stack_t **stack, unsigned int line_number); /* renamed from 'div' to 'div_op' as 'div' is a standard function. */
+/**
+ * div_op - divides the second top element by the top element of the stack
+ * @stack: double pointer to the stack's top
+ * @line_number: line number in the Monty bytecode file
+ */
+void div_op(stack_t **stack, unsigned int line_number);
+/* renamed from 'div' to 'div_op' as 'div' is a standard function. */
 void mul_op(stack_t **stack, unsigned int line_number);
 void mod_op(stack_t **stack, unsigned int line_number);
 void pchar_op(stack_t **stack, unsigned int line_number);
@@ -57,6 +63,7 @@ void stack_op(stack_t **stack, unsigned int line_number);
 void queue_op(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **stack);
 int is_valid_int(const char *str);
-void process_opcode(stack_t **stack, char *opcode, char *argument, unsigned int line_number);
+void process_opcode(stack_t **stack, char *opcode,
+char *argument, unsigned int line_number);
 
 #endif /* MONTY_H */
