@@ -50,7 +50,7 @@ void pstr_op(stack_t **stack, unsigned int line_number)
 {
     stack_t *current = *stack;
 
-    (void) line_number;  // line_number is unused in this function
+    (void) line_number;  /* line_number is unused in this function */
 
     while (current && current->n > 0 && current->n < 128)
     {
