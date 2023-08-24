@@ -3,23 +3,13 @@
 /**
  * push - pushes an element to the stack
  * @stack: double pointer to the stack's top
+ * @n: integer value to push onto the stack
  * @line_number: line number in the Monty bytecode file
  */
-void push(stack_t **stack, unsigned int line_number)
+void push(stack_t **stack, int n, unsigned int line_number)
 {
-    char *token;
-    int num;
     stack_t *new_node;
 
-    /* Extract number from the rest of the line */
-    token = strtok(NULL, " \n\t\r");
-    if (!token || !isdigit(token[0]))
-    {
-        fprintf(stderr, "L%d: usage: push integer\n", line_number);
-        exit(EXIT_FAILURE);
-    }
-    
-    num = atoi(token);
     new_node = malloc(sizeof(stack_t));
     if (!new_node)
     {
@@ -27,7 +17,7 @@ void push(stack_t **stack, unsigned int line_number)
         exit(EXIT_FAILURE);
     }
     
-    new_node->n = num;
+    new_node->n = n;
     new_node->prev = NULL;
     new_node->next = *stack;
     
