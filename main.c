@@ -31,7 +31,7 @@ int main(int argc, char **argv)
         /* If opcode is "push" */
         if (strcmp(opcode, "push") == 0)
         {
-            if (!argument || !isdigit(argument[0]))
+            if (!argument || !is_valid_int(argument))
             {
                 fprintf(stderr, "L%d: usage: push integer\n", line_number);
                 free(line);
