@@ -28,7 +28,7 @@ int main(int argc, char **argv)
         opcode = strtok(line, " \n\t");
         argument = strtok(NULL, " \n\t");
 
-        // If opcode is "push"
+        /* If opcode is "push" */
         if (strcmp(opcode, "push") == 0)
         {
             if (!argument || !isdigit(argument[0]))
@@ -40,15 +40,15 @@ int main(int argc, char **argv)
             }
             push(&stack, atoi(argument));
         }
-        // If opcode is "pall"
+        /* If opcode is "pall" */
         else if (strcmp(opcode, "pall") == 0)
             pall(&stack, line_number);
-        // If opcode is "pint"
+        /* If opcode is "pint" */
         else if (strcmp(opcode, "pint") == 0)
             pint(&stack, line_number);
-        // ... Add more opcode comparisons here ...
+        /* ... Add more opcode comparisons here ... */
 
-        // If opcode is not recognized
+        /* If opcode is not recognized */
         else
         {
             fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
