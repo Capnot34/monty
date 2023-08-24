@@ -56,5 +56,6 @@ void rotr_op(stack_t **stack, unsigned int line_number);
 void stack_op(stack_t **stack, unsigned int line_number);
 void queue_op(stack_t **stack, unsigned int line_number);
 void free_stack(stack_t **stack);
+int is_valid_int(const char *str);
 
 #endif /* MONTY_H */
