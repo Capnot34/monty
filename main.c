@@ -38,7 +38,7 @@ int main(int argc, char **argv)
                 free_stack(&stack);
                 exit(EXIT_FAILURE);
             }
-            push(&stack, atoi(argument));
+           push(&stack, atoi(argument), line_number);
         }
         /* If opcode is "pall" */
         else if (strcmp(opcode, "pall") == 0)
