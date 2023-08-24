@@ -1,12 +1,12 @@
 #include "monty.h"
 
 /**
- * pint_op - prints the value at the top of the stack.
+ * pint - prints the value at the top of the stack.
  * @stack: double pointer to the top of the stack.
  * @line_number: line number where the instruction appears.
  * Return: nothing.
  */
-void pint_op(stack_t **stack, unsigned int line_number)
+void pint(stack_t **stack, unsigned int line_number)
 {
     if (!stack || !*stack)
     {
