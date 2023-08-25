@@ -44,6 +44,31 @@ unsigned int line_number)
 	{
 	pop(stack, line_number);
 	}
+	/* If opcode is "add" */
+	else if (strcmp(opcode, "add") == 0)
+	{
+		add(stack, line_number);
+	}
+	/* If opcode is "sub" */
+	else if (strcmp(opcode, "sub") == 0)
+	{
+		sub(stack, line_number);
+	}
+	/* If opcode is "mul" */
+	else if (strcmp(opcode, "mul") == 0)
+	{
+		mul_op(stack, line_number);
+	}
+	/* If opcode is "div" */
+	else if (strcmp(opcode, "div") == 0)
+	{
+		div_op(stack, line_number);
+	}
+	/* If opcode is "mod" */
+	else if (strcmp(opcode, "mod") == 0)
+	{
+		mod_op(stack, line_number);
+	}	
 	/* ... Add more opcode comparisons here ... */
 	else
 	{
