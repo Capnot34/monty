@@ -68,7 +68,7 @@ unsigned int line_number)
 	else if (strcmp(opcode, "mod") == 0)
 	{
 		mod_op(stack, line_number);
-	}	
+	}
 	/* ... Add more opcode comparisons here ... */
 	else
 	{
