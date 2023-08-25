@@ -1,5 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define STACK_MODE 0
+#define QUEUE_MODE 1
 
 #define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
@@ -66,6 +68,6 @@ void free_stack(stack_t **stack);
 int is_valid_int(const char *str);
 void process_opcode(stack_t **stack, char *opcode,
 char *argument, unsigned int line_number);
-extern int data_structure_mode;
+extern int mode;
 
 #endif /* MONTY_H */
