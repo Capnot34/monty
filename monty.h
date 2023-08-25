@@ -1,20 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
-#define STACK_MODE 0
-#define QUEUE_MODE 1
 
 #define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
-typedef struct global_s
-{
-	int mode;
-} global_t;
-
-extern global_t global_vars;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
