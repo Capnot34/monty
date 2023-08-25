@@ -62,6 +62,12 @@ int main(int argc, char **argv)
 	while (getline(&line, &len, file) != -1)
 	{
 		line_number++;
+		/* Skip leading white spaces */
+		while (*line && isspace(*line))
+			line++;
+		/* If line is a comment or empty, skip processing */
+		if (*line == '#' || *line == '\0')
+			continue;
 		opcode = strtok(line, " \n\t");
 		argument = strtok(NULL, " \n\t");
 		process_opcode(&stack, opcode, argument, line_number);
