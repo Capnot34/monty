@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+int mode = STACK_MODE;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
