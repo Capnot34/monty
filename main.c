@@ -28,7 +28,6 @@ unsigned int line_number)
 	else if (strcmp(opcode, "nop") == 0)
 	{
 		/* Do nothing, continue with the next opcode */
-		continue;
 	}		
 	/* If opcode is "pchar" */
 	else if (strcmp(opcode, "pchar") == 0)
