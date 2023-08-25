@@ -89,6 +89,7 @@ int main(int argc, char **argv)
 {
 	FILE *file;
 	char *line = NULL, *opcode, *argument;
+	char *temp_line;
 	size_t len = 0;
 	unsigned int line_number = 0;
 	stack_t *stack = NULL;
@@ -107,15 +108,16 @@ int main(int argc, char **argv)
 	while (getline(&line, &len, file) != -1)
 	{
 		line_number++;
-		/* Skip leading white spaces */
-		while (*line && isspace(*line))
-			line++;
+		temp_line = line;
+		while (*temp_line && isspace(*temp_line))
+			temp_line++;
 		/* If line is a comment or empty, skip processing */
-		if (*line == '#' || *line == '\0')
+		if (*temp_line == '#' || *temp_line == '\0')
 			continue;
-		opcode = strtok(line, " \n\t");
+		opcode = strtok(temp_line, " \n\t");
 		argument = strtok(NULL, " \n\t");
 		process_opcode(&stack, opcode, argument, line_number);
+		temp_line = line;
 	}
 	free(line);
 	free_stack(&stack);
