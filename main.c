@@ -39,6 +39,11 @@ unsigned int line_number)
 	{
 		swap(stack, line_number);
 	}
+	/* If opcode is "pop" */
+	else if (strcmp(opcode, "pop") == 0)
+	{
+	pop(stack, line_number);
+	}
 	/* ... Add more opcode comparisons here ... */
 	else
 	{
