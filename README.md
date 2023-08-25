@@ -21,7 +21,7 @@ Dive into the world of Monty bytecodes and explore them like never before! Our M
 git clone [[repository_link](https://github.com/Capnot34/monty.git)]
 
 1. Navigate to the project directory:
-```cd path_to_directory
+cd path_to_directory
 
 1. Compile the source files:
 gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
