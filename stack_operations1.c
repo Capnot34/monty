@@ -53,7 +53,7 @@ unsigned int line_number __attribute__((unused)))
 void stack_op(stack_t **stack __attribute__((unused)),
 unsigned int line_number __attribute__((unused)))
 {
-	global_vars.mode = 0;
+	global_vars.mode = STACK_MODE;
 }
 
 /**
@@ -64,5 +64,5 @@ unsigned int line_number __attribute__((unused)))
 void queue_op(stack_t **stack __attribute__((unused)),
 unsigned int line_number __attribute__((unused)))
 {
-	global_vars.mode = 1;
+	global_vars.mode = QUEUE_MODE;
 }
