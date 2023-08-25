@@ -50,6 +50,16 @@ char *opcode, char *argument, unsigned int line_number)
 		div_op(stack, line_number);
 	else if (strcmp(opcode, "mod") == 0)
 		mod_op(stack, line_number);
+	else if (strcmp(opcode, "pstr") == 0)
+		pstr_op(stack, line_number);
+	else if (strcmp(opcode, "rotl") == 0)
+		rotl_op(stack, line_number);
+	else if (strcmp(opcode, "rotr") == 0)
+		rotr_op(stack, line_number);
+	else if (strcmp(opcode, "stack") == 0)
+		stack_op(stack, line_number);
+	else if (strcmp(opcode, "queue") == 0)
+		queue_op(stack, line_number);
 	else
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
