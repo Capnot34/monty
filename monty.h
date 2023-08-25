@@ -65,5 +65,6 @@ void free_stack(stack_t **stack);
 int is_valid_int(const char *str);
 void process_opcode(stack_t **stack, char *opcode,
 char *argument, unsigned int line_number);
+extern int data_structure_mode;
 
 #endif /* MONTY_H */
