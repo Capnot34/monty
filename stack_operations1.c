@@ -1,4 +1,5 @@
 #include "monty.h"
+global_t global_vars = {STACK_MODE};
 
 /**
  * rotl_op - rotates the stack to the top
