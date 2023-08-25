@@ -24,6 +24,11 @@ unsigned int line_number)
 	{
 		pint(stack, line_number);
 	}
+	/* If opcode is "pchar" */
+	else if (strcmp(opcode, "pchar") == 0)
+	{
+		pchar_op(stack, line_number);
+	}
 	/* ... Add more opcode comparisons here ... */
 	else
 	{
