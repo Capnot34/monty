@@ -30,24 +30,24 @@ gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
 ./monty your_file.m
 
 ## 📋 Task Descriptions
-- push, pall: Lays the foundation with the basic opcodes, `push` and `pall`.
-- pint: Displays the value at the top of the stack.
-- pop: Removes the top element of the stack.
+- **push, pall:** Lays the foundation with the basic opcodes, `push` and `pall`.
+- **pint:** Displays the value at the top of the stack.
+- **pop:** Removes the top element of the stack.
 
 ... journeying through other tasks to:
 
 - Brainf*ck: A delightful detour into the Brainf*ck scripting landscape.
-> #### 🚨 Note: Our `task 15`, featuring the `stack` and `queue` opcodes, is still under artistic development!
+> ### 🚨 Note: Our **task 15**, featuring the `stack` and `queue` opcodes, is still under artistic development!
 
 ## 📂File Descriptions
-- 📄 main.c: The main entry point and driver for our Monty bytecode interpreter.
-- 📄 utility.c: The toolbelt of functions ensuring fluid operations.
-- 📄 math_operations.c: The heart of arithmetic operations for Monty opcodes.
-- 📄 print_operations.c: Specially dedicated to printing-related tasks for our stack or queue.
-- 📄 stack_operations.c: Home to core stack or queue operations.
-- 📄 stack_operations1.c: An extended suite for additional stack or queue functions.
-- 📁 testfiles: Handcrafted test cases to rigorously vet our interpreter!
-- 📁 bf: A Brainf*ck aficionado's paradise.
+- **📄 main.c:** The main entry point and driver for our Monty bytecode interpreter.
+- **📄 utility.c:** The toolbelt of functions ensuring fluid operations.
+- **📄 math_operations.c:** The heart of arithmetic operations for Monty opcodes.
+- **📄 print_operations.c:** Specially dedicated to printing-related tasks for our stack or queue.
+- **📄 stack_operations.c:** Home to core stack or queue operations.
+- **📄 stack_operations1.c:** An extended suite for additional stack or queue functions.
+- **📁 testfiles:** Handcrafted test cases to rigorously vet our interpreter!
+- **📁 bf:** A Brainf*ck aficionado's paradise.
 
 ## 👥Authors
 
