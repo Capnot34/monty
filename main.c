@@ -1,23 +1,5 @@
 #include "monty.h"
 
-void swap(stack_t **stack, unsigned int line_number)
-{
-	stack_t *tmp;
-
-	if (!stack || !(*stack) || !((*stack)->next))
-	{
-		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
-		free_stack(stack);
-		exit(EXIT_FAILURE);
-	}
-	tmp = *stack;
-	*stack = (*stack)->next;
-	tmp->next = (*stack)->next;
-	(*stack)->next = tmp;
-	tmp->prev = *stack;
-	if (tmp->next)
-		tmp->next->prev = tmp;
-}
 void process_opcode(stack_t **stack, char *opcode, char *argument,
 unsigned int line_number)
 {
