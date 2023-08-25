@@ -24,6 +24,12 @@ unsigned int line_number)
 	{
 		pint(stack, line_number);
 	}
+	/* If opcode is "nop" */
+	else if (strcmp(opcode, "nop") == 0)
+	{
+		/* Do nothing, continue with the next opcode */
+		continue;
+	}		
 	/* If opcode is "pchar" */
 	else if (strcmp(opcode, "pchar") == 0)
 	{
