@@ -1,5 +1,5 @@
 #include "monty.h"
-int mode = STACK_MODE;
+global_t global_vars = {STACK_MODE};
 
 /**
  * opcode_push - handles the 'push' opcode
