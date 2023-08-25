@@ -9,6 +9,13 @@
 #include <string.h>
 #include <ctype.h>
 
+typedef struct global_s
+{
+	int mode;
+} global_t;
+
+extern global_t global_vars;
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -67,6 +74,5 @@ void free_stack(stack_t **stack);
 int is_valid_int(const char *str);
 void process_opcode(stack_t **stack, char *opcode,
 char *argument, unsigned int line_number);
-extern int mode;
 
 #endif /* MONTY_H */
