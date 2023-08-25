@@ -1,5 +1,4 @@
 #include "monty.h"
-global_t global_vars = {STACK_MODE};
 
 /**
  * rotl_op - rotates the stack to the top
@@ -52,9 +51,7 @@ unsigned int line_number __attribute__((unused)))
  */
 void stack_op(stack_t **stack __attribute__((unused)),
 unsigned int line_number __attribute__((unused)))
-{
-	global_vars.mode = STACK_MODE;
-}
+{}
 
 /**
  * queue_op - does nothing (to ensure queue behavior)
@@ -63,6 +60,4 @@ unsigned int line_number __attribute__((unused)))
  */
 void queue_op(stack_t **stack __attribute__((unused)),
 unsigned int line_number __attribute__((unused)))
-{
-	global_vars.mode = QUEUE_MODE;
-}
+{}
