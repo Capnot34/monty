@@ -1,4 +1,5 @@
 #include "monty.h"
+int mode = STACK_MODE;
 
 /**
  * opcode_push - handles the 'push' opcode
