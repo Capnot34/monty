@@ -106,7 +106,9 @@ void process_opcode(stack_t **stack, char *opcode, char *argument, unsigned int 
 		}
 		i++;
 	}
-	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+	fprintf(stderr, 
+		"L%d: unknown instruction %s\n", 
+		line_number, opcode);
 	free_stack(stack);
 	exit(EXIT_FAILURE);
 }
