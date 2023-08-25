@@ -76,13 +76,7 @@ void handle_mod(stack_t **stack, char *argument, unsigned int line_number)
 void process_opcode(stack_t **stack, char *opcode, char *argument, unsigned int line_number)
 {
 	int i = 0;
-
-	typedef struct instruction_s
-	{
-		char *opcode;
-		void (*f)(stack_t **stack, char *argument, unsigned int line_number);
-	} instruction_t;
-
+	
 	instruction_t ops[] = {
 		{"push", handle_push},
 		{"pall", handle_pall},
