@@ -37,7 +37,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=c89 *.c -o monty
 ... journeying through other tasks to:
 
 - Brainf*ck: A delightful detour into the Brainf*ck scripting landscape.
->  🚨 Note: Our task 15, featuring the `stack` and `queue` opcodes, is still under artistic development!
+>>  🚨 Note: Our task 15, featuring the `stack` and `queue` opcodes, is still under artistic development!
 
 ## 📂File Descriptions
 - 📄 main.c: The main entry point and driver for our Monty bytecode interpreter.
